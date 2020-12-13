@@ -11,8 +11,7 @@ class ListUsers extends Component {
       {this.props.users.map((user) => (
       	<li key={user.id} className='user-list-item'>
 			<div className='user-info'>
-			<p> {user.id} {user.name} </p>
-			<p> Favorite Movie ID: {this.props.profiles.map( (profile) => {
+			<p> {user.name}'s favorite movie is {this.props.profiles.map( (profile) => {
               if (profile.userID === user.id.toString()){
               	return this.props.movies.map(movie => {
             		if (movie.id.toString() === profile.favoriteMovieID) {
